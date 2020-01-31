@@ -12,7 +12,9 @@ window.onload = function(){
 	checkExist();
 }
 
-window.onhashchange = function(){
+window.addEventListener("hashchange", checkDisclaimer);
+
+function checkDisclaimer(){
 	if (window.location.href.split('/').pop() == ""){
 		disclaimerAdded = false;
 		checkExist();
